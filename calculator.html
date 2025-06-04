@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="calculator.css">
 </head>
 <body>
-    <table border="1">
+    <table>
         <!-------***** input-->
         <tr>
             <td class="inputcell" colspan="4">
@@ -33,12 +33,12 @@
             <td class="operatorbutton" onclick="operatorBtnPressed('+')">+</td>
         </tr>
         <tr>
-            <td colspan="2" class="digitbutton" onclick="digitBtnPressed(0)">0</td>
+            <td colspan="2" class="zero" onclick="digitBtnPressed(0)">0</td>
             <td class="ACbutton" onclick="buttonACPressed()">AC</td>
             <td class="operatorbutton" onclick="operatorBtnPressed('/')">/</td>
         </tr>
         <tr>
-            <td colspan="4" class="operatorbutton" onclick="equalsBtnPressed()">=</td>
+            <td colspan="4" class="equals" onclick="equalsBtnPressed()">=</td>
         </tr>
     </table>
 
