@@ -41,3 +41,22 @@ td{
 td:hover {
     opacity: 0.50;
 }
+
+
+@media (max-width: 600px) and (max-height: 914px) {
+    table{
+        font: normal 2em Arial, sans-serif;
+        height: 100vh; /* Makes the table take up full screen height */
+        width: 100vw;  /* Optional: ensure full width too */
+        border-collapse: collapse; /* Helps remove unwanted spacing */
+    }
+    tr{
+        height: 20vh;
+    }
+    td{
+        width: 50vw;
+    }
+    #inputbox{
+        font-size: 1.2em;
+    }
+}
