@@ -5,6 +5,7 @@
     <title>calculator</title>
     <script src="calculator.js"></script>
     <link rel="stylesheet" href="calculator.css">
+    <script src="https://kit.fontawesome.com/2be268ca3f.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <table>
@@ -15,30 +16,33 @@
             </td>
         </tr>
         <tr>
+            <td class="ACbutton" onclick="buttonACPressed()"><i class="fa-solid fa-delete-left"></i> </td>
+            <td onclick="buttonPlusMinusPressed()"><i class="fa-solid fa-plus-minus"></i></td>
+            <td class="percentbutton" onclick="buttonPercentPressed()"><i class="fa-solid fa-percent"></i></td>
+            <td class="operatorbutton" onclick="operatorBtnPressed('/')"><i class="fa-solid fa-divide"></i></td>
+        </tr>
+        <tr>
             <td class="digitbutton" onclick="digitBtnPressed(7)">7</td>
             <td class="digitbutton" onclick="digitBtnPressed(8)">8</td>
             <td class="digitbutton" onclick="digitBtnPressed(9)">9</td>
-            <td class="operatorbutton" onclick="operatorBtnPressed('*')">x</td>
+            <td class="operatorbutton" onclick="operatorBtnPressed('*')"><i class="fa-solid fa-multiply"></i></td>
         </tr>
         <tr>
             <td class="digitbutton" onclick="digitBtnPressed(4)">4</td>
             <td class="digitbutton" onclick="digitBtnPressed(5)">5</td>
             <td class="digitbutton" onclick="digitBtnPressed(6)">6</td>
-            <td class="operatorbutton" onclick="operatorBtnPressed('-')">-</td>
+            <td class="operatorbutton" onclick="operatorBtnPressed('-')"><i class="fa-solid fa-minus"></i></td>
         </tr>
         <tr>
             <td class="digitbutton" onclick="digitBtnPressed(1)">1</td>
             <td class="digitbutton" onclick="digitBtnPressed(2)">2</td>
             <td class="digitbutton" onclick="digitBtnPressed(3)">3</td>
-            <td class="operatorbutton" onclick="operatorBtnPressed('+')">+</td>
+            <td class="operatorbutton" onclick="operatorBtnPressed('+')"><i class="fa-solid fa-plus"></i></td>
         </tr>
         <tr>
             <td colspan="2" class="zero" onclick="digitBtnPressed(0)">0</td>
-            <td class="ACbutton" onclick="buttonACPressed()">AC</td>
-            <td class="operatorbutton" onclick="operatorBtnPressed('/')">/</td>
-        </tr>
-        <tr>
-            <td colspan="4" class="equals" onclick="equalsBtnPressed()">=</td>
+            <td class="dot" onclick="dotBtnPressed()">.</td>
+            <td colspan="4" class="operatorbutton" onclick="equalsBtnPressed()"><i class="fa-solid fa-equals"></i></td>
         </tr>
     </table>
 
