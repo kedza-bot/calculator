@@ -12,10 +12,19 @@ function digitBtnPressed(button){
 
 }
 // Function to handle the AC button press
-function buttonACPressed(){
-    document.getElementById("inputbox").value = 0;
-    newLine = true;
+function buttonACPressed() {
+    var inputBox = document.getElementById("inputbox");
+    var currentValue = inputBox.value;
+
+    // Remove the last character
+    if (currentValue.length > 1) {
+        inputBox.value = currentValue.slice(0, -1);
+    } else {
+        inputBox.value = "0";
+        newLine = true;
+    }
 }
+
 
 var value1;
 var currentOperator;
@@ -26,11 +35,38 @@ function operatorBtnPressed(operator) {
     value1 = parseInt(document.getElementById("inputbox").value);
     newLine = true;
 }
+// Function to handle the percentage button press
+function buttonPercentPressed() {
+    var inputBox = document.getElementById("inputbox");
+    var currentValue = parseFloat(inputBox.value);
+
+    // Convert to percentage
+    var percentValue = currentValue / 100;
+
+    // Update display
+    inputBox.value = percentValue;
+}
+
+
+// minbutton fuction
+function buttonPlusMinusPressed() {
+    var inputBox = document.getElementById("inputbox");
+    var currentValue = inputBox.value;
+
+    // If it's already negative, remove the minus
+    if (currentValue.startsWith("-")) {
+        inputBox.value = currentValue.slice(1);
+    } else if (currentValue !== "0") {
+        // If it's not zero, add a minus
+        inputBox.value = "-" + currentValue;
+    }
+}
 
 // Function to handle the equals button press
 function equalsBtnPressed() {
     var value2 = parseInt(document.getElementById("inputbox").value);
     var finaltotal;
+
     switch (currentOperator) {
         case "+":
             finaltotal= value1 + value2;
